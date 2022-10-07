@@ -4,8 +4,12 @@
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
 companies:
   type: pandas.CSVDataSet
-  filepath: https://kedro-org.github.io/kedro/reviews.csv
+  filepath: https://kedro-org.github.io/kedro/reviews.csv 
 
 reviews:
   type: pandas.CSVDataSet
   filepath: https://kedro-org.github.io/kedro/companies.csv
+
+shuttles:
+  type: pandas.ExcelDataSet
+  filepath: https://kedro-org.github.io/kedro/shuttles.xlsx
