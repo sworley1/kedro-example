@@ -4,12 +4,29 @@
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
 companies:
   type: pandas.CSVDataSet
-  filepath: https://kedro-org.github.io/kedro/reviews.csv 
+  filepath: https://kedro-org.github.io/kedro/companies.csv 
 
 reviews:
   type: pandas.CSVDataSet
-  filepath: https://kedro-org.github.io/kedro/companies.csv
+  filepath: https://kedro-org.github.io/kedro/reviews.csv
 
 shuttles:
   type: pandas.ExcelDataSet
   filepath: https://kedro-org.github.io/kedro/shuttles.xlsx
+
+preprocessed_companies:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_companies.pq
+
+preprocessed_shuttles:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_shuttles.pq
+
+model_input_table:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/model_input_table.pq
+
+regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor.pickle
+  versioned: true
